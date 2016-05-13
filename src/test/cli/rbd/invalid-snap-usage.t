@@ -89,6 +89,7 @@
   rbd: snapname specified for a command that doesn't use it
   [22]
   $ rbd bench-write foo@snap
+  rbd: bench-write is deprecated, use rbd bench --io-type write ...
   rbd: snapname specified for a command that doesn't use it
   [22]
 
