@@ -35,7 +35,7 @@
 <h3>
 <a id="benchmarking-smr-drives" class="anchor" href="#benchmarking-smr-drives" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Benchmarking SMR Drives</h3>
 
-<p>HGST Created a libzbc library to benchmark Host Managed and Host Aware SMR drives. I implemented few benchmaking scripts that can be used to benchmark SMR drives <a href="https://github.com/ceph/ceph/pull/9534">PULL 9534</a></p>
+<p>HGST Created a <a href="https://github.com/hgst/libzbc">libzbc library</a> to benchmark Host Managed and Host Aware SMR drives. I implemented few benchmarking scripts that can be used to benchmark SMR drives <a href="https://github.com/ceph/ceph/pull/9534">PULL 9534</a></p>
 
 <h3>
 <a id="integrating-libzbc-library" class="anchor" href="#integrating-libzbc-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>integrating libzbc library</h3>
@@ -58,9 +58,27 @@
 <a id="add-cleaner--garbage-collector" class="anchor" href="#add-cleaner--garbage-collector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add cleaner / garbage collector</h3>
 
 <h2>
+<a id="howto" class="anchor" href="#howto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HOWTO</h2>
+
+<h3>
+<a id="enable-libzbc-compile-support" class="anchor" href="#enable-libzbc-compile-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enable libzbc compile support</h3>
+
+<p>set WITH_LIBZBC=1</p>
+
+<h3>
+<a id="enable-smr-allocator" class="anchor" href="#enable-smr-allocator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enable SMR Allocator</h3>
+
+<p>set bluestore_block_allocator smr</p>
+
+<h2>
 <a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h2>
 
 <p>This project is currently maintained by <a href="https://github.com/shehbazj" class="user-mention">@shehbazj</a>. A big thank you to mentor <a href="https://github.com/liewegas" class="user-mention">@liewegas</a> and collaborators <a href="https://github.com/allensamuels" class="user-mention">@allensamuels</a> <a href="https://github.com/chhabaramesh" class="user-mention">@chhabaramesh</a> <a href="https://github.com/alimaredia" class="user-mention">@alimaredia</a> <a href="https://github.com/badone" class="user-mention">@badone</a> who helped at different stages of the project.</p>
+
+<h1>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h1>
+
+<p>Signed-off-by: <a href="mailto:shehbaz.jaffer@mail.utoronto.ca">shehbaz.jaffer@mail.utoronto.ca</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/shehbazj/ceph">Bluestore SMR Support</a> is maintained by <a href="https://github.com/shehbazj">shehbazj</a>.</span>
