@@ -33,9 +33,9 @@
 <a id="implementation" class="anchor" href="#implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation.</h2>
 
 <p>Writes two Bluestore filesystem have the following sequence of operations:
-+Allocating a region to write data to in-memory in the Allocator.
-+Performing write to device
-+Updating transaction Key in KV-DB.</p>
+1. Allocating a region to write data to in-memory in the Allocator.
+2. Performing write to device
+3. Updating transaction Key in KV-DB.</p>
 
 <p>Multiple threads can perform Step 1 parallelly by using the <a href="https://github.com/ceph/ceph/pull/9031">Bitmap Allocator</a>. Step 3 can also be done parallelly by using advanced KV interfaces. For Step 2, for all devices, we do not have multiple threads writing sequentially to the device. However, for SMR drives, we want to execute Step 2 sequentially.</p>
 
