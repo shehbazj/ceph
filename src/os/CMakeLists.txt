@@ -52,19 +52,17 @@ if(WITH_SPDK)
 endif()
 
 if(WITH_LIBZBC)
+  include_directories(${LIBZBC_INCLUDE_PATH})
   add_definitions(-DSMR_SUPPORT)
   list(APPEND libos_srcs
     bluestore/SMRAllocator.cc
     bluestore/SMRFreelistManager.cc)
-  message("**************************** libzbc include path ${LIBZBC_INCLUDE_PATH} ***********************")
-  target_include_directories(os 
-  PRIVATE ${LIBZBC_INCLUDE_PATH})
 endif()
 
 add_library(os STATIC ${libos_srcs} $<TARGET_OBJECTS:kv_objs>)
 
 if(WITH_LIBZBC)
-  target_link_libraries(os zbc)
+  target_include_directories(os PRIVATE ${LIBZBC_INCLUDE_PATH})
 endif()
 
 if(HAVE_LIBAIO)
